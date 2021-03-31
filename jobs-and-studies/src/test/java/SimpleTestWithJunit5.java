@@ -2,9 +2,14 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 
+@TestMethodOrder(OrderAnnotation.class)
 public class SimpleTestWithJunit5 {
 
   @BeforeAll
@@ -18,13 +23,14 @@ public class SimpleTestWithJunit5 {
   }
 
   @Test
-//  @Order(1)
+  @Order(1)
   public void simpleCTest() {
     System.out.println("Test 1");
   }
 
   @Test
-//  @Order(2)
+  @Order(2)
+  @DisplayName("testul meu smecher")
   public void simpleBTest() {
     System.out.println("Test 2");
   }

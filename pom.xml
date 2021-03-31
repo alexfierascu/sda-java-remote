@@ -9,7 +9,6 @@
   <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
   <modules>
-    <module>weather-application</module>
     <module>jobs-and-studies</module>
     <module>city-hall-management</module>
     <module>sda-examples</module>

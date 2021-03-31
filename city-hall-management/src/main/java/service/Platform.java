@@ -27,14 +27,23 @@ public class Platform {
       personArray[freeIndex] = person;
       freeIndex++;
     } else {
-      System.out.println("N more space in platform");
+      System.out.println("No more space in the platform");
     }
   }
 
   public Person personFind(String name) {
+    if (personArray.length == 0 || personArray == null) {
+      return null;
+    }
     for (int i = 0; i < personArray.length; i++) {
-      if (personArray[i].getName().contains(name)) {
-        return personArray[i];
+      if (personArray[i] == null) {
+        return null;
+      } else {
+        if (personArray[i].getName().contains(name)) {
+          return personArray[i];
+        } else {
+          return null;
+        }
       }
     }
     return null;
@@ -61,7 +70,7 @@ public class Platform {
     return persons;
   }
 
-  public int numberOfPersonsLivingOnAGivenCity(String oras) {
+  public int numberOfPersonsLivingInCity(String oras) {
     int contor = 0;
     for (int i = 0; i < personArray.length; i++) {
       if (personArray[i].getLiving().getCity().contains(oras.toLowerCase(Locale.ROOT))) {

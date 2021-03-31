@@ -13,6 +13,7 @@
 
   <properties>
     <junit.version>5.7.0</junit.version>
+    <hamcrest.core.version>2.2</hamcrest.core.version>
   </properties>
 
   <dependencies>
@@ -23,6 +24,16 @@
       <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest-core -->
+    <dependency>
+      <groupId>org.hamcrest</groupId>
+      <artifactId>hamcrest-core</artifactId>
+      <version>${hamcrest.core.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+
   </dependencies>
 
 </project>
