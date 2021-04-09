@@ -13,6 +13,7 @@
     <module>city-hall-management</module>
     <module>sda-examples</module>
     <module>tdd</module>
+    <module>tipuriDeDate</module>
   </modules>
 
   <properties>
